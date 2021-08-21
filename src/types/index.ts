@@ -4,4 +4,5 @@ export type IAnt = {
     color: string,
     length: number,
     isCalculating?: boolean,
+    rate?: number,
 }

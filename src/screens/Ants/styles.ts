@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import type { ViewStyle, TextStyle } from 'react-native'
 
 interface IStyles {
@@ -16,9 +16,11 @@ interface IStyles {
 }
 
 
+const deviceHeight = Dimensions.get('window').height;
+
 const styles = StyleSheet.create<IStyles>({
     container: {
-        flex: 1,
+        height: deviceHeight / 2,
         backgroundColor: '#fff'
     },
     itemContainer: {
@@ -65,6 +67,15 @@ const styles = StyleSheet.create<IStyles>({
     },
     calculateButtonLabel: {
         color: '#132139'
+    },
+    header: {
+      flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    loaderContainer: {
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })
 
